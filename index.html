@@ -159,29 +159,41 @@
         border: 1px solid #b8860b;
         display: inline-block;
     }
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-start;
+}
 
+.skill-pill {
+    background-color: transparent;
+    border: 1px solid #b8860b;
+    color: #b8860b;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 999px;
+    white-space: nowrap;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
 
+@media (max-width: 576px) {
+    .skills {
+        justify-content: center;
+        gap: 6px;
+    }
 
     .skill-pill {
-        display: inline-block;
-        background-color: transparent;
-        border: 1px solid #b8860b;
-        color: #b8860b;
-        font-size: 0.85rem;
-        font-weight: 500;
-        padding: 6px 12px;
-        border-radius: 50px;
-        margin: 5px;
-        white-space: nowrap;
-        transition: background-color 0.3s ease;
+        font-size: 0.95rem;
+        padding: 10px 14px;
+        width: 100%;
+        text-align: center;
     }
-
-    .skills {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: 10px;
-    }
+}
     </style>
 </head>
 
