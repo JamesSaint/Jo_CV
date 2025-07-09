@@ -17,7 +17,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&amp;display=swap" rel="stylesheet" />
     <style>
-    body {
+        body {
         font-family: 'Titillium Web', sans-serif;
         background: #fff;
         color: #444;
@@ -103,7 +103,7 @@
     }
 
     h3 {
-        font-size: 1.15rem;
+        font-size: 1.0rem;
         margin: 1rem 0;
         font-weight: 600;
     }
@@ -115,7 +115,7 @@
     li {
         margin-bottom: 0.4rem;
         margin-left: 1.5rem;
-        font-size: 1.0rem;
+        font-size: 0.9rem;
         font-weight: 400;
         color: #444;
         list-style-type: circle;
@@ -146,10 +146,8 @@
         font-size: 0.9rem;
         color: #444;
     }
-
-
     .date-pill {
-        float: right;
+        float: right !important; 
         background-color: transparent;
         color: #444;
         font-size: 0.75rem;
@@ -196,6 +194,23 @@
         text-align: center;
     }
 }
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: inherit;
+  box-shadow: none;
+}
+.accordion-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  white-space: normal;
+}
+
+.accordion-button .date-pill {
+  margin-left: auto;
+}
+
     </style>
 </head>
 
@@ -209,103 +224,155 @@
                 <a href="mailto:dr.joanna.michalska@gmail.com" target="_blank">dr.joanna.michalska@gmail.com</a> |
                 <a href="https://linkedin.com/in/drjoannamichalska" target="_blank">LinkedIn</a>
             </p>
+             <p class="small">British & Polish Citizenship | Business German (B1, improving)</p>
         </header>
         <section class="tagline">
-            <p>"Transforming risk and culture at scale through conscious leadership, and AI-enabled innovation."</p>
+            <p>"Transforming enterprises, risk & culture at scale through conscious leadership and AI-enabled innovation."</p>
         </section>
-        <section>
-            <h2>Key Skills &amp; Expertise</h2>
-            <div class="skills"><span class="skill-pill">Strategic Vision &amp; Transformation</span><span class="skill-pill">Risk &amp; Regulatory Strategy</span><span class="skill-pill">AI &amp; Innovation Leadership</span><span class="skill-pill">Global Product &amp; Agile Delivery</span><span class="skill-pill">Board &amp; Regulator Engagement</span><span class="skill-pill">Data-Driven Decision Architecture</span><span class="skill-pill">Executive Coaching &amp; Gallup Strengths</span><span class="skill-pill">Culture &amp; Psychological Safety</span></div>
-        </section>
+
         <section>
             <h2>Executive Summary</h2>
-            <p>I consciously lead in environments where people are valued as deeply as performance, where integrity, trust, curiosity, and conscious growth create meaningful impact and are non-negotiable.</p>
-            <p>A strategic, values-led executive with over two decades of global leadership in enterprise risk, regulatory transformation, and innovation, I’m known for delivering scalable transformation grounded in precision, clarity, and human leadership.</p>
-            <p>PhD-qualified and published in strategic risk, I bridge analytical rigour with emotionally intelligent leadership. From building global product functions to embedding AI-powered controls, I bring vision into structured, sustainable execution.</p>
-            <p>As a Gallup-certified coach and NLP practitioner, I embed neuroscience-based leadership to elevate performance and culture. I lead consciously; where integrity, clarity and presence create trust and real impact.</p>
+            <p>I work at the intersection of enterprise risk, AI and ethics,  helping organisations navigate where regulation meets innovation, and where conscious leadership transforms change into something lasting. With 20+ years leading global financial transformations, I specialise in complex business and regulatory overhauls, guiding boards and teams to build trust, scale responsibly, and stay resilient in a world shaped by intelligent systems.</p> <p>As a PhD strategist and Gallup-certified executive coach, I pair analytical rigour with neuroscience-informed leadership because high performance starts with trust and psychological safety. From launching global product functions to embedding AI-enabled controls, I simplify complexity and keep people at the centre. I’m passionate about supporting leaders to navigate AI consciously, elevating literacy, strengthening ethics, and unlocking growth that’s both human and sustainable.</p>
         </section>
+
+        <section>
+            <h2>Key Skills &amp; Expertise</h2>
+            <div class="skills"><span class="skill-pill">Strategic Vision &amp; Enterprise Transformation</span><span class="skill-pill">Responsible AI Adoption &amp; Ethical Governance</span><span class="skill-pill">Governance, Risk &amp; Regulatory Strategy</span><span class="skill-pill">Global Product Leadership &amp; Agile Delivery</span><span class="skill-pill">Board &amp; Regulator Advisory</span><span class="skill-pill">Executive Coaching &amp; Conscious Leadership</span><span class="skill-pill">Culture, Inclusion &amp; Psychological Safety</span></div>
+        </section>
+
         <section>
             <h2>Professional Experience</h2>
-            <span class="date-pill">Mar 2021 – Present</span>
-            <h3>JP Morgan, London, UK – Global Head, CIB Payments Regulatory Reporting</h3>
+            <div class="accordion accordion-flush" id="accordionFlushExperience">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="true" aria-controls="flush-collapse1">
+                            <h3>Global Head, Commercial & Investment Bank (CIB) Payments Regulatory Reporting | J.P. Morgan | London, UK</h3>
+                            <span class="date-pill">Mar 2021 – Present</span>
+                            
+                        </button>
+                    </h2>
+                    <div id="flush-collapse1" class="accordion-collapse collapse" aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExperience">
+                        <div class="accordion-body">
+                            <p>Hired to establish and scale a centralised global payments regulatory reporting function, leading end-to-end strategy, transformation, and delivery across product, data, engineering, and operations.</p>
+                            <ul>
+<li>Led enterprise-scale transformation and global product build, backed by £XXM+ investment.</li>
+<li>Embedded responsible AI-enabled controls and ethical data governance, elevating trust and transparency across the reporting architecture.</li>
+<li>Built and scaled a cross-functional team (Product, Data, Risk & Controls, Ops) from 60 to 150+ over three years.</li>
+<li>Delivered 4x volume growth while strengthening audit and regulatory confidence across 100+ jurisdictions.</li>
+<li>Partnered with Tech, Data and Ops leaders to co-design scalable governance frameworks and embed agile operating models.</li>
+<li>Mentored senior leaders, fostering psychological safety and unified purpose across global teams.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapse2">
+                            <h3>Global Lead, Non-Financial Risk Management Strategy & Transformation | HSBC | London, UK</h3>
+                            <span class="date-pill">Dec 2019 – Mar 2021</span>
+                        </button>
+                    </h2>
+                    <div id="flush-collapse2" class="accordion-collapse collapse" aria-labelledby="flush-heading2" data-bs-parent="#accordionFlushExperience">
+                        <div class="accordion-body">
+                            <p>Appointed to lead the design and rollout of HSBC’s enterprise-wide Non-Financial Risk (NFR) transformation framework at Group level, unifying fragmented approaches and enabling strategic alignment across functions.</p>
+                            <ul>
+<li>Directed Group-wide NFR strategy across Risk, Compliance, Legal and Technology.</li>
+<li>Oversaw a £XXM portfolio integrating governance, taxonomies and resilience across 10 global workstreams.</li>
+<li>Developed scalable architecture and legal entity models, along with adoption blueprints and executive engagement plans.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3">
+                            <h3>Programme Lead – Global Commercial Banking (GCMB), Chief Control Office | HSBC | London, UK</h3>
+                            <span class="date-pill">Jun 2019 – Dec 2019</span>
+                        </button>
+                    </h2>
+                    <div id="flush-collapse3" class="accordion-collapse collapse" aria-labelledby="flush-heading3" data-bs-parent="#accordionFlushExperience">
+                        <div class="accordion-body">
+                            <p>Following Group-level design, appointed to embed and scale the NFR strategy across HSBC’s largest business, aligning regional delivery and regulatory compliance across high-complexity markets.</p>
+                            <ul>
+<li>Rolled out the NFR framework across 7 regions and 76 countries, spanning RCA, SOX, Cyber, Third Party and Model Risk.</li>
+<li>Directed Wholesale Risk Integration (SafeRisk) to unify taxonomies and ownership structures.</li>
+<li>Delivered PRA/FCA-aligned resilience frameworks, impact tolerances, and critical service mapping.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
+                            <h3>Executive Director, Global Lead – CIB Operational Risk Management | J.P. Morgan | London, UK & New York, US</h3>
+                            <span class="date-pill">Dec 2013 – Jun 2019</span>
+                        </button>
+                    </h2>
+                    <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExperience">
+                        <div class="accordion-body">
+                            <p>Led global and UK entity-level operational risk strategy across Markets, Operations and Technology, with end-to-end accountability for transformation, regulatory engagement, and cultural evolution.</p>
             <ul>
-                <li>Built and scaled a global regulatory reporting function from 60 to 150+ professionals.</li>
-                <li>Directed a multi-million dollar investment to modernise payments regulatory reporting across 100+ jurisdictions.</li>
-                <li>Rebuilt infrastructure in Eurobank, China and India to meet local requirements.</li>
-                <li>Established agile operating models and embedded product management across teams.</li>
-                <li>Partnered with senior execs to co-create shared governance and alignment.</li>
-                <li>Acted as cultural and coaching lead, embedding psychological safety.</li>
+<li>Advised CIB boards and senior executives on risk strategy, governance, and regulatory alignment.</li>
+<li>Delivered enterprise operational risk frameworks including capital adequacy, conduct and risk identification.</li>
+<li>Directed regulatory interaction and ICAAP/stress testing across PRA, FCA, FRB and SEC, ensuring Basel III/IV compliance.</li>
+<li>Advanced fraud detection and data-driven decisioning through AI-enabled risk analytics on the CIB Data Platform.</li>
+<li>Sponsored high-trust, high-performing cultures through human-centred leadership programmes.</li>
             </ul>
-             <span class="date-pill">Jun 2019 – Dec 2019</span>
-            <h3>HSBC, London, UK – Global Lead, NFRM Strategy &amp; Transformation</h3>
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-heading5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
+                            <h3>Earlier Experience | J.P. Morgan | Various Locations (London, New York, Edinburgh) | 2006 – 2013</h3>
+                            <span class="date-pill">Dec 2013 – Jun 2019</span>
+                        </button>
+                    </h2>
+                    <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExperience">
+                        <div class="accordion-body">
+                            <p>Held progressive leadership roles across risk and control functions, culminating as Global Lead for Counterparty Credit Risk. Managed multi-asset portfolios, modernised analytics and controls, and delivered transformation across EMEA and North America.</p>
             <ul>
-                <li>Designed and launched HSBC’s enterprise-wide NFR transformation framework.</li>
-                <li>Oversaw portfolio integrating governance, taxonomy and resilience strategy.</li>
-                <li>Advised senior leaders and created adoption blueprints and training.</li>
+<li>Managed global counterparty credit risk across structured finance, derivatives and retained loans, driving quantitative modelling and stress testing enhancements.</li>
+<li>Delivered strategic transformation improving governance, control frameworks and regulatory alignment, enhancing global reporting integrity.</li>
+<li>Oversaw risk for credit trading and fixed income, while supporting enterprise platform implementations and pricing data accuracy.</li>
             </ul>
-            <span class="date-pill">Dec 2019 – Mar 2021</span>
-            <h3>Programme Lead – GCMB, Chief Control Office</h3>
-            <ul>
-                <li>Embedded NFR transformation across 7 regions and 76 countries.</li>
-                <li>Led Wholesale Risk Integration Programme (SafeRisk).</li>
-                <li>Delivered resilience compliance and service mapping for PRA/FCA.</li>
-            </ul>
-            <span class="date-pill">Dec 2013 – Jun 2019</span>
-            <h3>JP Morgan – Executive Director, Global Lead CIB Operational Risk</h3>
-            <ul>
-                <li>Global lead for CIB Operational Risk and UK entity risk oversight.</li>
-                <li>Modernised governance, escalation and oversight architecture.</li>
-                <li>Led CIB Data Platform &amp; Services using AI and automation for fraud detection.</li>
-                <li>Championed human-centred conduct and culture change.</li>
-            </ul>
-            <span class="date-pill">May 2011 – Nov 2013</span>
-            <h3>Vice President – Global Counter-party Credit Risk Management </h3>
-            <ul>
-                <li>Managed exposure across structured finance, derivatives, and retained portfolios.</li>
-                <li>Integrated quantitative modelling into risk assessment strategy.</li>
-            </ul>
-            <span class="date-pill">Dec 2007 – May 2011</span>
-            <h3>Associate – CIB Risk &amp; Control </h3>
-            <ul>
-                <li>Oversaw credit trading and fixed income risk compliance.</li>
-            </ul>
-            <span class="date-pill">Jul 2006 – Dec 2007</span>
-            <h3>Analyst – Investment Banking Ops, Edinburgh </h3>
-            <ul>
-                <li>Supported pricing platform rollout and data integrity monitoring.</li>
-            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Repeat the same structure for remaining roles -->
+            </div>
         </section>
         <section>
-            <h2>Leadership &amp; Strategic Initiatives</h2>
+            <h2>Leadership &amp; Initiatives</h2>
             <ul>
-                <li>Gallup Certified Executive Coach | NLP Practitioner</li>
-                <li>Risk People Council Lead (EMEA), Mentored 100+ professionals</li>
-                <li>Gallup Strengths: Achiever | Strategic | Learner | Maximiser | Responsibility</li>
+<li>Values-led leadership: creates psychologically safe, high-performing environments through clarity, courage and compassion; committed to human integrity and conscious growth.</li>
+<li>Executive coaching & mentorship: Executive coach (Gallup) and NLP practitioner; delivered 100+ one-to-one and 400+ group coaching sessions, alongside extensive reverse mentorship and executive advisory.</li>
+<li>Culture & wellbeing: Designed and sponsored programmes on conduct, mental health and risk-aligned behavioural change, embedding trust and accountability across global teams.</li>
+<li>Strategic talent & inclusion: Led EMEA Risk People Council, driving talent, retention and inclusion initiatives across functions and senior leadership levels.</li>
             </ul>
         </section>
         <section>
             <h2>Education &amp; Certifications</h2>
             <ul>
-                <li>PhD – Risk Management, Brunel Business School</li>
-                <li>MSc – Investment Management, University of Economics (Poland)</li>
-                <li>BSc + BA – Business Studies &amp; Finance</li>
-                <li>CISI – Investment Admin Qualification, UK</li>
+<li>PhD, Strategic Risk Management – Brunel Business School, UK</li>
+<li>MSc, Investment Management – University of Economics, Poland</li>
+<li>BA (Hons), Business Studies & Finance – University of Abertay, Dundee</li>
+<li>BSc, Business & Management – University of Economics, Poland</li>
             </ul>
         </section>
         <section>
             <h2>Publications &amp; Thought Leadership</h2>
             <ul>
-                <li>PhD Thesis – Strategic ERM Framework (2014)</li>
-                <li>“Time to Reign” – Women in Business (2023)</li>
-                <li>Internal white papers + peer-reviewed risk publications</li>
+<li>Doctoral thesis on Strategic ERM (Brunel, 2014); peer-reviewed articles on risk, strategy and transformation.</li>
+<li>Author, Time to Reign (2023) — leadership and culture chapter.</li>
+<li>Published internal white papers on risk culture, strategic alignment and executive development.</li>
+<li>Current writing explores conscious leadership and systemic change in transformation.</li>
             </ul>
         </section>
-        <section>
-            <h2>A Note About Me</h2>
-            <p class="note">"I’ve always been a seeker; curious, passionate, and drawn to the deeper patterns behind how we lead, love, and live. I grew up in Poland with a fierce drive to learn, express, and find meaning beyond survival. That same spark lives on in my work and life today; where strategic vision meets emotional presence."</p>
-            <p class="note">"I’m a leader, a partner, a parent, a writer, and a woman devoted to growth;  the kind that inspires, teaches, and transforms. My journey has taught me that true leadership begins within. I believe in brave spaces, human connection, and the power of transformation;  not as a concept, but as a way of being."</p>
-            <p class="note">"I aspire to live and lead in a way that reflects wholeness, consciousness, and integrity; within myself, my family, and the work I offer to the world."</p>
-        </section>
+
         <header class="footer">
             <img alt="Joanna Michalska (Keith) " src="https://jamessaint.github.io/Jo_CV/images/Profile.jpg" />
             <h1>Dr. Joanna Michalska (Keith)</h1>
@@ -317,5 +384,6 @@
         </header>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </html>
