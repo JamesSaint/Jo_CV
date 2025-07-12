@@ -293,6 +293,22 @@
 }
 
 
+/* Contact List wrapper */
+.contact-list-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .contact-list-wrapper {
+    justify-content: center;
+  }
+
+  .contact-list {
+    text-align: left;
+  }
+}
+
 /* Contact List styling */
 .contact-list {
   list-style: none;
@@ -316,6 +332,7 @@
   fill: #d4af37;
   color: #d4af37;
 }
+
 
 
 
@@ -352,6 +369,7 @@
 
   <!-- Contact (full width) -->
   <div class="sidebar-section contact">
+  <div class="contact-list-wrapper">
     <ul class="contact-list">
       <li>
         <span class="icon phone"></span>
@@ -363,7 +381,7 @@
       </li>
       <li>
         <span class="icon location"></span>
-        <div>London, UK | Europe | Worldwide</div>
+        <div>London, UK</div>
       </li>
       <li>
         <span class="icon linkedin"></span>
@@ -371,6 +389,8 @@
       </li>
     </ul>
   </div>
+</div>
+
 
   <!-- Grid wrapper for other sidebar-sections -->
   <div class="sidebar-grid">
