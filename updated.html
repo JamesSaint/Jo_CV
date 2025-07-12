@@ -252,13 +252,13 @@
   line-height: 1.4;
 }
 
-/* Grid layout for sidebar sections */
+/* Grid behavior for sidebar sections */
 .sidebar-grid {
   display: block;
-  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
-/* Mobile 2-column grid */
+/* Responsive 2x2 grid on mobile */
 @media (max-width: 768px) {
   .sidebar-grid {
     display: grid;
@@ -266,30 +266,35 @@
     gap: 1rem;
   }
 
-  .sidebar-section {
+  .sidebar-grid .sidebar-section {
     background: #fefbf3;
     padding: 1rem;
-    border-radius: 6px;
-    border: 1px solid #eee;
-  }
-
-  .sidebar-section h5 {
-    font-size: 1rem;
-    color: #003366;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-  }
-
-  .sidebar-section ul {
-    padding-left: 1rem;
-    margin: 0;
-    list-style-type: disc;
-  }
-
-  .sidebar-grid hr {
-    display: none;
+    border-left: 3px solid #d4af37;
+    border-radius: 4px;
+    margin-bottom: 0;
   }
 }
+
+/* Consistent style for each section */
+.sidebar-section h5 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.sidebar-section li {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
 
 /* Contact List styling */
 .contact-list {
@@ -341,22 +346,37 @@
 <div class="row">
 <!-- Sidebar -->
 <aside>
+  <!-- Header (full width) -->
   <div class="sidebar-header">
     <img alt="Joanna Michalska" class="profile" src="profile.jpg" />
     <h1>Dr. Joanna Michalska (Keith)</h1>
     <div class="role">Transformation Executive<br />Strategy · Risk · AI</div>
   </div>
 
-  <div class="sidebar-grid">
-    <div class="sidebar-section contact">
-      <ul class="contact-list">
-        <li><span class="icon phone"></span><a href="tel:+447707092212">+44 7707 092 212</a></li>
-        <li><span class="icon email"></span><a href="mailto:dr.joanna.michalska@gmail.com">dr.joanna.michalska@gmail.com</a></li>
-        <li><span class="icon location"></span><div>London, UK</div></li>
-        <li><span class="icon linkedin"></span><a href="https://linkedin.com/in/drjoannamichalska" target="_blank">linkedin.com/in/drjoannamichalska</a></li>
-      </ul>
-    </div>
+  <!-- Contact (full width) -->
+  <div class="sidebar-section contact">
+    <ul class="contact-list">
+      <li>
+        <span class="icon phone"></span>
+        <a href="tel:+447707092212">+44 7707 092 212</a>
+      </li>
+      <li>
+        <span class="icon email"></span>
+        <a href="mailto:dr.joanna.michalska@gmail.com">dr.joanna.michalska@gmail.com</a>
+      </li>
+      <li>
+        <span class="icon location"></span>
+        <div>London, UK</div>
+      </li>
+      <li>
+        <span class="icon linkedin"></span>
+        <a href="https://linkedin.com/in/drjoannamichalska" target="_blank">linkedin.com/in/drjoannamichalska</a>
+      </li>
+    </ul>
+  </div>
 
+  <!-- Grid wrapper for other sidebar-sections -->
+  <div class="sidebar-grid">
     <div class="sidebar-section">
       <h5>Values</h5>
       <ul>
@@ -380,7 +400,7 @@
       <ul>
         <li>PhD – Strategic Risk Management</li>
         <li>MSc – Investment Management</li>
-        <li>BA(Hons) – Business Studies &amp; Finance</li>
+        <li>BA(Hons) – Business Studies & Finance</li>
       </ul>
     </div>
 
@@ -403,6 +423,7 @@
     </div>
   </div>
 </aside>
+
 
 <!-- Main content -->
 <div class="main"><section class="mb-4"><h2>Executive Summary</h2><p>Transformation executive passionate about reshaping enterprises where strategy, risk, AI, and ethics converge. Ensures regulation and innovation advance together through conscious leadership. With two decades guiding teams and boards through complex financial and regulatory change, recognised for building trust, scaling responsibly, and strengthening resilience in a world increasingly shaped by intelligent systems.</p> <p>A PhD strategist and Gallup- certified executive coach who combines analytical rigour with neuroscience-informed leadership to foster environments where psychological safety and ethical growth truly thrive.</p></section>
