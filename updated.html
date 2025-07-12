@@ -32,12 +32,11 @@
   <link rel="icon" type="image/png" href="https://jamessaint.github.io/Jo_CV/favicon.png" />
   <link rel="apple-touch-icon" href="https://jamessaint.github.io/Jo_CV/apple-touch-icon.png" />
 
-  <!-- Fonts & Bootstrap -->
+  <!-- Font & Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 
-  <!-- Schema.org JSON-LD -->
+  <!-- Schema.org JSON-LD (Optional but powerful for search engines) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,7 +45,9 @@
     "image": "https://jamessaint.github.io/Jo_CV/profile.jpg",
     "jobTitle": "Transformation Executive",
     "url": "https://jamessaint.github.io/Jo_CV/updated.html",
-    "sameAs": ["https://linkedin.com/in/drjoannamichalska"],
+    "sameAs": [
+      "https://linkedin.com/in/drjoannamichalska"
+    ],
     "worksFor": {
       "@type": "Organization",
       "name": "J.P. Morgan"
@@ -57,9 +58,9 @@
     }
   }
   </script>
-
-  <!-- Styles -->
-  <style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
     body {
       font-family: 'Titillium Web', sans-serif;
       font-size: 14px;
@@ -84,9 +85,9 @@
         flex: 0 0 30%;
         max-width: 30%;
         padding-right: 30px;
-        padding-top: 30px;
+        padding-top:30px;
         border-right: 1px solid #d4af37;
-        background-color: rgba(175, 175, 175, 0.1);
+        background-color:rgba(175, 175, 175, 0.1);
       }
     }
     .main {
@@ -119,22 +120,38 @@
       line-height: 1.4;
       margin-bottom: 20px;
     }
+    .sidebar-section {
+      margin-bottom: 22px;
+    }
     .sidebar-header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .sidebar-header h1 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #003366;
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-    }
-    .sidebar-header .role {
-      font-size: 1rem;
-      color: #555;
-      line-height: 1.4;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sidebar-header .profile {
+  width: 150px;
+  height: auto;
+  margin-bottom: 12px;
+  border-radius: 50%;
+}
+
+.sidebar-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  color: #003366;
+  text-transform: uppercase;
+}
+
+.sidebar-header .role {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.4;
+}
+
     .sidebar-section h5 {
       text-transform: uppercase;
       font-size: 12px;
@@ -152,207 +169,334 @@
       margin-bottom: 4px;
       font-size: 13px;
     }
-    .contact-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .contact-list li {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.5rem;
-      font-size: 0.95rem;
-      color: #003366;
-    }
-    .contact-list i {
-      color: #d4af37;
-    }
-    .sidebar-grid {
+    .contact a, .contact div {
       display: block;
-      margin-top: 1.5rem;
+      font-size: 13px;
+      color: #003366;
+      text-decoration: none;
+      margin-bottom: 4px;
     }
-    @media (max-width: 768px) {
-      .sidebar-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-      }
-      .sidebar-grid .sidebar-section {
-        padding: 1rem;
-        border-left: 1px solid #d4af37;
-        margin-bottom: 0;
-      }
-      .contact-list-wrapper {
-        justify-content: center;
-      }
+    h2 {
+      text-transform: uppercase;
+      font-size: 15px;
+      color: #003366;
+      font-weight: 700;
+      border-bottom: 1px solid #d4af37;
+      margin-top: 36px;
+      margin-bottom: 12px;
+      padding-bottom: 12px;
     }
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #003366;
+      margin-top: 20px;
+      margin-bottom: 5px;
+    }
+    p, ul {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+    hr {
+      color: #afafaf;  
+      opacity: .5;  
+    }
+ .contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  gap: 0.6rem;
+}
+
+.contact-list .icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  fill: #d4af37 !important;
+  color: #d4af37 !important;
+}
+  .sidebar-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sidebar-header .profile {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.sidebar-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.sidebar-header .role {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Grid behavior for sidebar sections */
+.sidebar-grid {
+  display: block;
+  margin-top: 1.5rem;
+}
+
+/* Responsive 2x2 grid on mobile */
+@media (max-width: 768px) {
+  .sidebar-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .sidebar-grid .sidebar-section {
+    padding: 1rem;
+    border-left: 1px solid #d4af37;
+    margin-bottom: 0;
+  }
+}
+
+/* Consistent style for each section */
+.sidebar-section h5 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.sidebar-section li {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+
+/* Contact List wrapper */
+.contact-list-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .contact-list-wrapper {
+    justify-content: center;
+  }
+
+  .contact-list {
+    text-align: left;
+  }
+}
+
+/* Contact List styling */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: #003366;
+}
+
+.contact-list .icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  fill: #d4af37;
+  color: #d4af37;
+}
+
+
+
+
+/* Icons (can be SVG or PNG background-image references) */
+.icon.phone {
+  background-image: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/telephone-fill.svg');
+}
+
+.icon.email {
+  background-image: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/envelope-fill.svg');
+}
+
+.icon.location {
+  background-image: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/geo-alt-fill.svg');
+}
+
+.icon.linkedin {
+  background-image: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/linkedin.svg');
+}
+
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+<div class="container">
+<div class="row">
+<!-- Sidebar -->
+<aside>
+  <!-- Header (full width) -->
+  <div class="sidebar-header">
+    <img alt="Joanna Michalska" class="profile" src="profile.jpg" />
+    <h1>Dr. Joanna Michalska (Keith)</h1>
+    <div class="role">Transformation Executive<br />Strategy · Risk · AI</div>
+  </div>
 
-      <!-- ========== Sidebar ========== -->
-      <aside>
+  <!-- Contact (full width) -->
+  <div class="sidebar-section contact">
+  <div class="contact-list-wrapper">
+    <ul class="contact-list">
+      <li>
+        <span class="icon phone"></span>
+        <a href="tel:+447707092212">+44 7707 092 212</a>
+      </li>
+      <li>
+        <span class="icon email"></span>
+        <a href="mailto:dr.joanna.michalska@gmail.com">dr.joanna.michalska@gmail.com</a>
+      </li>
+      <li>
+        <span class="icon location"></span>
+        <div>London, UK | Europe | Worldwide</div>
+      </li>
+      <li>
+        <span class="icon linkedin"></span>
+        <a href="https://linkedin.com/in/drjoannamichalska" target="_blank">linkedin.com/in/drjoannamichalska</a>
+      </li>
+    </ul>
+  </div>
+</div>
 
-        <!-- Profile Header -->
-        <div class="sidebar-header">
-          <img alt="Joanna Michalska" class="profile" src="profile.jpg" />
-          <h1>Dr. Joanna Michalska (Keith)</h1>
-          <div class="role">Transformation Executive<br />Strategy · Risk · AI</div>
-        </div>
 
-        <!-- Contact Details -->
-        <div class="sidebar-section contact">
-          <div class="contact-list-wrapper">
-            <ul class="contact-list">
-              <li>
-                <span class="icon phone"></span>
-                <a href="tel:+447707092212">+44 7707 092 212</a>
-              </li>
-              <li>
-                <span class="icon email"></span>
-                <a href="mailto:dr.joanna.michalska@gmail.com">dr.joanna.michalska@gmail.com</a>
-              </li>
-              <li>
-                <span class="icon location"></span>
-                <div>London, UK | Europe | Worldwide</div>
-              </li>
-              <li>
-                <span class="icon linkedin"></span>
-                <a href="https://linkedin.com/in/drjoannamichalska" target="_blank">linkedin.com/in/drjoannamichalska</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+  <!-- Grid wrapper for other sidebar-sections -->
+  <div class="sidebar-grid">
+    <div class="sidebar-section">
+      <h5>Values</h5>
+      <ul>
+        <li>Integrity</li>
+        <li>Trust</li>
+        <li>Innovation</li>
+      </ul>
+    </div>
 
-        <!-- Grid Layout Sidebar Content -->
-        <div class="sidebar-grid">
+    <div class="sidebar-section">
+      <h5>Languages</h5>
+      <ul>
+        <li>Polish – Native</li>
+        <li>English – Fluent</li>
+        <li>German – B1 (Improving)</li>
+      </ul>
+    </div>
 
-          <div class="sidebar-section">
-            <h5>Values</h5>
-            <ul>
-              <li>Integrity</li>
-              <li>Trust</li>
-              <li>Innovation</li>
-            </ul>
-          </div>
+    <div class="sidebar-section">
+      <h5>Qualifications</h5>
+      <ul>
+        <li>PhD – Strategic Risk Management</li>
+        <li>MSc – Investment Management</li>
+        <li>BA(Hons) – Business Studies & Finance</li>
+      </ul>
+    </div>
 
-          <div class="sidebar-section">
-            <h5>Languages</h5>
-            <ul>
-              <li>Polish – Native</li>
-              <li>English – Fluent</li>
-              <li>German – B1 (Improving)</li>
-            </ul>
-          </div>
+    <div class="sidebar-section">
+      <h5>Certifications</h5>
+      <ul>
+        <li>Gallup Executive Coach</li>
+        <li>NLP Practitioner</li>
+        <li>Henley Business School</li>
+      </ul>
+    </div>
 
-          <div class="sidebar-section">
-            <h5>Qualifications</h5>
-            <ul>
-              <li>PhD – Strategic Risk Management</li>
-              <li>MSc – Investment Management</li>
-              <li>BA(Hons) – Business Studies & Finance</li>
-            </ul>
-          </div>
+    <div class="sidebar-section">
+      <h5>Professional Interests</h5>
+      <ul>
+        <li>Responsible AI</li>
+        <li>Ethics in Innovation</li>
+        <li>Executive Development</li>
+      </ul>
+    </div>
+  </div>
+</aside>
 
-          <div class="sidebar-section">
-            <h5>Certifications</h5>
-            <ul>
-              <li>Gallup Executive Coach</li>
-              <li>NLP Practitioner</li>
-              <li>Henley Business School</li>
-            </ul>
-          </div>
 
-          <div class="sidebar-section">
-            <h5>Professional Interests</h5>
-            <ul>
-              <li>Responsible AI</li>
-              <li>Ethics in Innovation</li>
-              <li>Executive Development</li>
-            </ul>
-          </div>
-
-        </div>
-      </aside>
-
-      <!-- ========== Main Content ========== -->
-      <div class="main">
-
-        <!-- Executive Summary -->
-        <section class="mb-4">
-          <h2>Executive Summary</h2>
-          <p>Transformation executive passionate about reshaping enterprises where strategy, risk, AI, and ethics converge. Ensures regulation and innovation advance together through conscious leadership. With two decades guiding teams and boards through complex financial and regulatory change, recognised for building trust, scaling responsibly, and strengthening resilience in a world increasingly shaped by intelligent systems.</p>
-          <p>A PhD strategist and Gallup-certified executive coach who combines analytical rigour with neuroscience-informed leadership to foster environments where psychological safety and ethical growth truly thrive.</p>
-        </section>
-
-        <!-- Professional Experience -->
-        <h2>Professional Experience</h2>
-
-        <h3>Global Head, Commercial & Investment Bank (CIB) Payments Regulatory Reporting | J.P. Morgan | London, UK</h3>
-        <p><strong>Mar 2021 – Present</strong></p>
-        <ul>
-          <li>Delivered a strategic transformation programme for J.P. Morgan’s Corporate and Investment Bank (CIB), leading global teams across London, New York and Asia. Improved accuracy, timeliness and controls for over 100 regulatory reports, reducing financial and reputational risk.</li>
-          <li>Collaborated with Technology and Operations to embed sustainable automation and establish ongoing regulatory change processes, resulting in significant cost reduction.</li>
-          <li>Advised senior stakeholders on data management, governance and regulatory change across CIB Payments, contributing to the bank’s enterprise data strategy.</li>
-        </ul>
-        <hr>
-
-        <h3>Transformation Director, Risk & Regulatory | PwC (Contract) | London, UK</h3>
-        <p><strong>Nov 2020 – Feb 2021</strong></p>
-        <ul>
-          <li>Advised a major global bank on complex transformation issues related to regulatory risk, financial crime and misconduct frameworks post-Brexit.</li>
-          <li>Developed strategic recommendations and execution plans presented to the Group Executive Committee.</li>
-        </ul>
-        <hr>
-
-        <h3>Global Head of Risk Strategy & Transformation | HSBC | London, UK</h3>
-        <p><strong>Jul 2017 – Apr 2020</strong></p>
-        <ul>
-          <li>Led strategic regulatory programmes, including compliance with the Senior Managers Regime, Risk Taxonomy and Global Non-Financial Risk frameworks.</li>
-          <li>Built and led a global team responsible for Risk Strategy, Culture and Transformation, collaborating with C-suite and regional leads across Europe, Asia and the Americas.</li>
-          <li>Developed AI-led innovation in enterprise risk and conduct oversight, working closely with Data and Technology to embed sustainable, explainable solutions.</li>
-        </ul>
-        <hr>
-
-        <h3>Executive Director – Strategy & Risk Transformation | EY | London, UK</h3>
-        <p><strong>Jul 2010 – Jul 2017</strong></p>
-        <ul>
-          <li>Advised global banks and regulators on enterprise risk management, culture and conduct, and emerging risks (climate, digital).</li>
-          <li>Led strategic transformation engagements for FTSE 100 financial institutions, resulting in measurable improvements in resilience and governance.</li>
-          <li>Built EY’s market presence in risk and conduct, authoring global insights and speaking regularly at international forums.</li>
-        </ul>
-        <hr>
-
-        <!-- Voluntary Roles -->
-        <h2>Voluntary & Advisory Roles</h2>
-        <ul>
-          <li>Fellow, Forward Institute – Responsible Leadership (Present)</li>
-          <li>Member, AI & Ethics Forum – House of Lords (2022–23)</li>
-          <li>Advisor, FutureDotNow Digital Inclusion (2021–22)</li>
-        </ul>
-
-        <!-- Education -->
-        <h2>Education</h2>
-        <ul>
-          <li>PhD, Strategic Risk Management – Manchester Business School</li>
-          <li>MSc, Investment Management – Cass Business School</li>
-          <li>BA (Hons), Business Studies & Finance – University of Greenwich</li>
-        </ul>
-
-        <!-- Awards -->
-        <h2>Awards, Conferences & Press</h2>
-        <ul>
-          <li>Women in AI – AI Leader of the Year (Nominee, 2024)</li>
-          <li>FT Women in Business | RiskMinds International | AI UK | Financial Conduct Authority (FCA) Speaker</li>
-          <li>Press: Financial Times, Forbes, ICAEW, City AM, Risk.net</li>
-        </ul>
-
-      </div> <!-- end .main -->
-    </div> <!-- end .row -->
-  </div> <!-- end .container -->
+<!-- Main content -->
+<div class="main"><section class="mb-4"><h2>Executive Summary</h2><p>Transformation executive passionate about reshaping enterprises where strategy, risk, AI, and ethics converge. Ensures regulation and innovation advance together through conscious leadership. With two decades guiding teams and boards through complex financial and regulatory change, recognised for building trust, scaling responsibly, and strengthening resilience in a world increasingly shaped by intelligent systems.</p> <p>A PhD strategist and Gallup- certified executive coach who combines analytical rigour with neuroscience-informed leadership to foster environments where psychological safety and ethical growth truly thrive.</p></section>
+<!-- All main content will be added in next step -->
+<h2>Professional Experience</h2>
+<h3>Global Head, Commercial &amp; Investment Bank (CIB) Payments Regulatory Reporting | J.P. Morgan | London, UK</h3>
+<p><strong>Mar 2021 – Present</strong></p>
+<ul>
+<li>Delivered a strategic transformation programme for J.P. Morgan’s Corporate and Investment Bank (CIB), leading global teams across London, New York and Asia. Improved accuracy, timeliness and controls for over 100 regulatory reports, reducing financial and reputational risk.</li>
+<li>Collaborated with Technology and Operations to embed sustainable automation and establish ongoing regulatory change processes, resulting in significant cost reduction.</li>
+<li>Advised senior stakeholders on data management, governance and regulatory change across CIB Payments, contributing to the bank’s enterprise data strategy.</li>
+</ul>
+    <hr>
+<h3>Transformation Director, Risk &amp; Regulatory | PwC (Contract) | London, UK</h3>
+<p><strong>Nov 2020 – Feb 2021</strong></p>
+<ul>
+<li>Advised a major global bank on complex transformation issues related to regulatory risk, financial crime and misconduct frameworks post-Brexit.</li>
+<li>Developed strategic recommendations and execution plans presented to the Group Executive Committee.</li>
+</ul>
+    <hr>
+<h3>Global Head of Risk Strategy &amp; Transformation | HSBC | London, UK</h3>
+<p><strong>Jul 2017 – Apr 2020</strong></p>
+<ul>
+<li>Led strategic regulatory programmes, including compliance with the Senior Managers Regime, Risk Taxonomy and Global Non-Financial Risk frameworks.</li>
+<li>Built and led a global team responsible for Risk Strategy, Culture and Transformation, collaborating with C-suite and regional leads across Europe, Asia and the Americas.</li>
+<li>Developed AI-led innovation in enterprise risk and conduct oversight, working closely with Data and Technology to embed sustainable, explainable solutions.</li>
+</ul>
+    <hr>
+<h3>Executive Director – Strategy &amp; Risk Transformation | EY | London, UK</h3>
+<p><strong>Jul 2010 – Jul 2017</strong></p>
+<ul>
+<li>Advised global banks and regulators on enterprise risk management, culture and conduct, and emerging risks (climate, digital).</li>
+<li>Led strategic transformation engagements for FTSE 100 financial institutions, resulting in measurable improvements in resilience and governance.</li>
+<li>Built EY’s market presence in risk and conduct, authoring global insights and speaking regularly at international forums.</li>
+</ul>
+    <hr>
+<h2>Voluntary &amp; Advisory Roles</h2>
+<ul>
+<li>Fellow, Forward Institute – Responsible Leadership (Present)</li>
+<li>Member, AI &amp; Ethics Forum – House of Lords (2022–23)</li>
+<li>Advisor, FutureDotNow Digital Inclusion (2021–22)</li>
+</ul>
+<h2>Education</h2>
+<ul>
+<li>PhD, Strategic Risk Management – Manchester Business School</li>
+<li>MSc, Investment Management – Cass Business School</li>
+<li>BA (Hons), Business Studies &amp; Finance – University of Greenwich</li>
+</ul>
+<h2>Awards, Conferences &amp; Press</h2>
+<ul>
+<li>Women in AI – AI Leader of the Year (Nominee, 2024)</li>
+<li>FT Women in Business | RiskMinds International | AI UK | Financial Conduct Authority (FCA) Speaker</li>
+<li>Press: Financial Times, Forbes, ICAEW, City AM, Risk.net</li>
+</ul>
+</div>
+</div>
+</div>
 </body>
 </html>
-
