@@ -32,11 +32,12 @@
   <link rel="icon" type="image/png" href="https://jamessaint.github.io/Jo_CV/favicon.png" />
   <link rel="apple-touch-icon" href="https://jamessaint.github.io/Jo_CV/apple-touch-icon.png" />
 
-  <!-- Font & Styles -->
+  <!-- Fonts & Bootstrap -->
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
 
-  <!-- Schema.org JSON-LD (Optional but powerful for search engines) -->
+  <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -45,9 +46,7 @@
     "image": "https://jamessaint.github.io/Jo_CV/profile.jpg",
     "jobTitle": "Transformation Executive",
     "url": "https://jamessaint.github.io/Jo_CV/updated.html",
-    "sameAs": [
-      "https://linkedin.com/in/drjoannamichalska"
-    ],
+    "sameAs": ["https://linkedin.com/in/drjoannamichalska"],
     "worksFor": {
       "@type": "Organization",
       "name": "J.P. Morgan"
@@ -58,9 +57,9 @@
     }
   }
   </script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
-<style>
+
+  <!-- Styles -->
+  <style>
     body {
       font-family: 'Titillium Web', sans-serif;
       font-size: 14px;
@@ -85,9 +84,9 @@
         flex: 0 0 30%;
         max-width: 30%;
         padding-right: 30px;
-        padding-top:30px;
+        padding-top: 30px;
         border-right: 1px solid #d4af37;
-        background-color:rgba(175, 175, 175, 0.1);
+        background-color: rgba(175, 175, 175, 0.1);
       }
     }
     .main {
@@ -120,38 +119,22 @@
       line-height: 1.4;
       margin-bottom: 20px;
     }
-    .sidebar-section {
-      margin-bottom: 22px;
-    }
     .sidebar-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.sidebar-header .profile {
-  width: 150px;
-  height: auto;
-  margin-bottom: 12px;
-  border-radius: 50%;
-}
-
-.sidebar-header h1 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 0.5rem 0;
-  color: #003366;
-  text-transform: uppercase;
-}
-
-.sidebar-header .role {
-  font-size: 0.95rem;
-  color: #666;
-  line-height: 1.4;
-}
-
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .sidebar-header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #003366;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+    .sidebar-header .role {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.4;
+    }
     .sidebar-section h5 {
       text-transform: uppercase;
       font-size: 12px;
@@ -169,192 +152,44 @@
       margin-bottom: 4px;
       font-size: 13px;
     }
-    .contact a, .contact div {
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .contact-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      color: #003366;
+    }
+    .contact-list i {
+      color: #d4af37;
+    }
+    .sidebar-grid {
       display: block;
-      font-size: 13px;
-      color: #003366;
-      text-decoration: none;
-      margin-bottom: 4px;
+      margin-top: 1.5rem;
     }
-    h2 {
-      text-transform: uppercase;
-      font-size: 15px;
-      color: #003366;
-      font-weight: 700;
-      border-bottom: 1px solid #d4af37;
-      margin-top: 36px;
-      margin-bottom: 12px;
-      padding-bottom: 12px;
+    @media (max-width: 768px) {
+      .sidebar-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .sidebar-grid .sidebar-section {
+        padding: 1rem;
+        border-left: 1px solid #d4af37;
+        margin-bottom: 0;
+      }
+      .contact-list-wrapper {
+        justify-content: center;
+      }
     }
-    h3 {
-      font-size: 14px;
-      font-weight: 600;
-      color: #003366;
-      margin-top: 20px;
-      margin-bottom: 5px;
-    }
-    p, ul {
-      font-size: 14px;
-      line-height: 1.5;
-    }
-    ul {
-      padding-left: 20px;
-      margin-bottom: 20px;
-    }
-    hr {
-      color: #afafaf;  
-      opacity: .5;  
-    }
- .contact-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.contact-list li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.6rem;
-  gap: 0.6rem;
-}
-
-.contact-list .icon {
-  width: 1rem;
-  height: 1rem;
-  flex-shrink: 0;
-  fill: #d4af37 !important;
-  color: #d4af37 !important;
-}
-  .sidebar-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.sidebar-header .profile {
-  width: 150px;
-  height: auto;
-  border-radius: 50%;
-  margin-bottom: 12px;
-}
-
-.sidebar-header h1 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #003366;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-}
-
-.sidebar-header .role {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.4;
-}
-
-/* Grid behavior for sidebar sections */
-.sidebar-grid {
-  display: block;
-  margin-top: 1.5rem;
-}
-
-/* Responsive 2x2 grid on mobile */
-@media (max-width: 768px) {
-  .sidebar-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-
-  .sidebar-grid .sidebar-section {
-    padding: 1rem;
-    border-left: 1px solid #d4af37;
-    margin-bottom: 0;
-  }
-}
-
-/* Consistent style for each section */
-.sidebar-section h5 {
-  font-size: 1rem;
-  text-transform: uppercase;
-  color: #003366;
-  margin-bottom: 0.5rem;
-}
-
-.sidebar-section ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 0;
-}
-
-.sidebar-section li {
-  font-size: 0.9rem;
-  color: #333;
-  margin-bottom: 0.3rem;
-}
-
-
-/* Contact List wrapper */
-.contact-list-wrapper {
-  display: flex;
-  justify-content: flex-start;
-}
-
-@media (max-width: 768px) {
-  .contact-list-wrapper {
-    justify-content: center;
-  }
-
-  .contact-list {
-    text-align: left;
-  }
-}
-
-/* Contact List styling */
-.contact-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.contact-list li {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-  color: #003366;
-}
-
-.contact-list .icon {
-  width: 1rem;
-  height: 1rem;
-  flex-shrink: 0;
-  fill: #d4af37;
-  color: #d4af37;
-}
-
-
-
-
-/* Icons (can be SVG or PNG background-image references) */
-.icon.phone {
-  background-image: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/telephone-fill.svg');
-}
-
-.icon.email {
-  background-image: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/envelope-fill.svg');
-}
-
-.icon.location {
-  background-image: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/geo-alt-fill.svg');
-}
-
-.icon.linkedin {
-  background-image: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/icons/linkedin.svg');
-}
-
   </style>
 </head>
+
 <body>
 <div class="container">
 <div class="row">
